@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="edd-fd-eFQ">
+                                <rect key="frame" x="85.5" y="241.5" width="204" height="204"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_top" translatesAutoresizingMaskIntoConstraints="NO" id="FJu-tM-UW6" userLabel="launch Top">
+                                <rect key="frame" x="106.5" y="241" width="162.5" height="162.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FJu-tM-UW6" secondAttribute="height" id="BEn-oE-5AS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_heart" translatesAutoresizingMaskIntoConstraints="NO" id="MOw-nE-k0t" userLabel="launch center">
+                                <rect key="frame" x="136" y="292" width="102" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MOw-nE-k0t" secondAttribute="height" id="qXm-Bk-3M4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FJu-tM-UW6" firstAttribute="width" secondItem="edd-fd-eFQ" secondAttribute="width" multiplier="0.8" id="2O4-Nv-T5d"/>
+                            <constraint firstItem="FJu-tM-UW6" firstAttribute="width" secondItem="FJu-tM-UW6" secondAttribute="height" id="2qL-ml-trJ"/>
+                            <constraint firstItem="MOw-nE-k0t" firstAttribute="centerX" secondItem="edd-fd-eFQ" secondAttribute="centerX" id="8tK-X1-tEi"/>
+                            <constraint firstItem="MOw-nE-k0t" firstAttribute="centerY" secondItem="edd-fd-eFQ" secondAttribute="centerY" id="ABE-Bg-irh"/>
+                            <constraint firstItem="FJu-tM-UW6" firstAttribute="centerX" secondItem="edd-fd-eFQ" secondAttribute="centerX" id="GBU-Nv-gdL"/>
+                            <constraint firstItem="edd-fd-eFQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="KtL-I7-mwU"/>
+                            <constraint firstItem="edd-fd-eFQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bCe-aW-NVI"/>
+                            <constraint firstItem="edd-fd-eFQ" firstAttribute="width" secondItem="edd-fd-eFQ" secondAttribute="height" multiplier="1:1" id="ecT-4K-Tyj"/>
+                            <constraint firstItem="MOw-nE-k0t" firstAttribute="width" secondItem="edd-fd-eFQ" secondAttribute="width" multiplier="0.5" id="oiB-6M-UMs"/>
+                            <constraint firstItem="FJu-tM-UW6" firstAttribute="top" secondItem="edd-fd-eFQ" secondAttribute="top" id="p9v-c0-7cP"/>
+                            <constraint firstItem="MOw-nE-k0t" firstAttribute="width" secondItem="MOw-nE-k0t" secondAttribute="height" id="xfB-eU-FWy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="launchBottomView" destination="edd-fd-eFQ" id="VmA-QT-BWQ"/>
+                        <outlet property="launchTopView" destination="FJu-tM-UW6" id="Oo9-8b-mm7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch_bottom" width="178" height="178"/>
+        <image name="launch_heart" width="102" height="93"/>
+        <image name="launch_top" width="148" height="148"/>
+    </resources>
+</document>
